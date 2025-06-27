@@ -1,0 +1,169 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+    FaPhoneAlt,
+    FaEnvelope,
+    FaFacebookF,
+    FaTwitter,
+    FaLinkedinIn,
+    FaPhone,
+    FaAngleDown,
+    FaBars,
+    FaTimes,
+} from 'react-icons/fa';
+
+export default function Navbar() {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const menuItems = [
+        { name: 'Home', href: '#home' },
+        { name: 'Services', href: '#services' },
+        { name: 'Careers', href: '#careers' },
+        {
+            name: 'About Us',
+            href: '#about',
+            dropdown: [
+                { name: 'Statutory Compliance', href: '#statutory' },
+                { name: 'Training & Development', href: '#training' },
+                { name: 'Corporate Social Responsibility', href: '#csr' },
+                { name: 'Mission & Vision', href: '#mission' },
+            ],
+        },
+        { name: 'Locations', href: '#locations' },
+        { name: 'Contact Us', href: '#contact' },
+    ];
+
+    return (
+        <>
+            {/* Top Bar */}
+            {!isScrolled && (
+                <div className="bg-[#002060] text-white py-2 text-sm">
+                    <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                        <div className="flex items-center gap-6">
+                            <div className="flex items-center gap-1">
+                                <FaPhoneAlt />
+                                <span>+91-8069200100</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                                <FaEnvelope />
+                                <span>sib@sibservices.in</span>
+                            </div>
+                        </div>
+                        <div className="flex gap-4">
+                            <FaFacebookF className="hover:text-yellow-400 cursor-pointer" />
+                            <FaTwitter className="hover:text-yellow-400 cursor-pointer" />
+                            <FaLinkedinIn className="hover:text-yellow-400 cursor-pointer" />
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Navbar */}
+            <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90'}`}>
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex justify-between items-center h-20">
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center">
+                            <Image src="/images/sib-logo.webp" alt="SIB Logo" width={120} height={120} className="w-[70px] h-auto" priority />
+                        </Link>
+
+                        {/* Desktop Menu */}
+                        <ul className="hidden md:flex items-center gap-8 text-[#002060] font-semibold relative">
+                            {menuItems.map((item) =>
+                                item.dropdown ? (
+                                    <li key={item.name} className="relative group">
+                                        <a href={item.href} className="flex items-center gap-1 relative group-hover:text-yellow-500 transition">
+                                            {item.name}
+                                            <FaAngleDown size={12} />
+                                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#002060] transition-all duration-300 group-hover:w-full"></span>
+                                        </a>
+                                        {/* Dropdown stays open on hover */}
+                                        <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded z-10 w-64 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300">
+                                            {item.dropdown.map((sub) => (
+                                                <li key={sub.name}>
+                                                    <a href={sub.href} className="block px-4 py-2 text-[#002060] hover:bg-yellow-100">
+                                                        {sub.name}
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                ) : (
+                                    <li key={item.name}>
+                                        <a href={item.href} className="relative group transition">
+                                            {item.name}
+                                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#002060] transition-all duration-300 group-hover:w-full"></span>
+                                        </a>
+                                    </li>
+                                )
+                            )}
+                            <li>
+                                <a
+                                    href="tel:08069200100"
+                                    className="flex items-center gap-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
+                                >
+                                    <FaPhone className="text-sm" /> Call Us
+                                </a>
+                            </li>
+                        </ul>
+
+                        {/* Mobile Toggle */}
+                        <div className="md:hidden">
+                            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                                {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile Menu */}
+                {mobileMenuOpen && (
+                    <div className="md:hidden bg-white shadow-md px-6 pb-4">
+                        <ul className="flex flex-col gap-4 text-[#002060] font-semibold">
+                            {menuItems.map((item) =>
+                                item.dropdown ? (
+                                    <li key={item.name}>
+                                        <details>
+                                            <summary className="cursor-pointer flex items-center gap-1">
+                                                {item.name} <FaAngleDown size={12} />
+                                            </summary>
+                                            <ul className="ml-4 mt-2 space-y-2">
+                                                {item.dropdown.map((sub) => (
+                                                    <li key={sub.name}>
+                                                        <a href={sub.href}>{sub.name}</a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </details>
+                                    </li>
+                                ) : (
+                                    <li key={item.name}>
+                                        <a href={item.href}>{item.name}</a>
+                                    </li>
+                                )
+                            )}
+                            <li>
+                                <a
+                                    href="tel:08069200100"
+                                    className="inline-block mt-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
+                                >
+                                    <FaPhone className="inline mr-2" /> Call Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </nav>
+        </>
+    );
+}
