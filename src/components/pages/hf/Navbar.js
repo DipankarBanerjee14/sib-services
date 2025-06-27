@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
     FaPhoneAlt,
     FaEnvelope,
@@ -16,6 +17,7 @@ import {
 } from 'react-icons/fa';
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -26,21 +28,21 @@ export default function Navbar() {
     }, []);
 
     const menuItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'Services', href: '#services' },
-        { name: 'Careers', href: '#careers' },
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+        { name: 'Careers', href: '/careers' },
         {
             name: 'About Us',
-            href: '#about',
+            href: '/about',
             dropdown: [
-                { name: 'Statutory Compliance', href: '#statutory' },
-                { name: 'Training & Development', href: '#training' },
-                { name: 'Corporate Social Responsibility', href: '#csr' },
-                { name: 'Mission & Vision', href: '#mission' },
+                { name: 'Statutory Compliance', href: '/about/statutory' },
+                { name: 'Training & Development', href: '/about/training' },
+                { name: 'Corporate Social Responsibility', href: '/about/csr' },
+                { name: 'Mission & Vision', href: '/about/mission' },
             ],
         },
-        { name: 'Locations', href: '#locations' },
-        { name: 'Contact Us', href: '#contact' },
+        { name: 'Locations', href: '/locations' },
+        { name: 'Contact Us', href: '/contact' },
     ];
 
     return (
@@ -69,12 +71,21 @@ export default function Navbar() {
             )}
 
             {/* Navbar */}
-            <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90'}`}>
+            <nav
+                className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90'
+                    }`}
+            >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex justify-between items-center h-20">
-                        {/* Logo */}
                         <Link href="/" className="flex items-center">
-                            <Image src="/images/sib-logo.webp" alt="SIB Logo" width={120} height={120} className="w-[70px] h-auto" priority />
+                            <Image
+                                src="/images/sib-logo.webp"
+                                alt="SIB Logo"
+                                width={120}
+                                height={120}
+                                className="w-[70px] h-auto"
+                                priority
+                            />
                         </Link>
 
                         {/* Desktop Menu */}
@@ -82,28 +93,49 @@ export default function Navbar() {
                             {menuItems.map((item) =>
                                 item.dropdown ? (
                                     <li key={item.name} className="relative group">
-                                        <a href={item.href} className="flex items-center gap-1 relative group-hover:text-yellow-500 transition">
+                                        <Link
+                                            href={item.href}
+                                            className="flex items-center gap-1 relative group-hover:text-yellow-500 transition"
+                                        >
                                             {item.name}
                                             <FaAngleDown size={12} />
-                                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#002060] transition-all duration-300 group-hover:w-full"></span>
-                                        </a>
-                                        {/* Dropdown stays open on hover */}
+                                            <span
+                                                className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${pathname === item.href
+                                                        ? 'w-full bg-yellow-400'
+                                                        : 'w-0 group-hover:w-full bg-[#002060]'
+                                                    }`}
+                                            ></span>
+                                        </Link>
                                         <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded z-10 w-64 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300">
                                             {item.dropdown.map((sub) => (
                                                 <li key={sub.name}>
-                                                    <a href={sub.href} className="block px-4 py-2 text-[#002060] hover:bg-yellow-100">
+                                                    <Link
+                                                        href={sub.href}
+                                                        className={`block px-4 py-2 text-[#002060] hover:bg-yellow-100 ${pathname === sub.href
+                                                                ? 'underline underline-offset-4 decoration-yellow-400'
+                                                                : ''
+                                                            }`}
+                                                    >
                                                         {sub.name}
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             ))}
                                         </ul>
                                     </li>
                                 ) : (
                                     <li key={item.name}>
-                                        <a href={item.href} className="relative group transition">
+                                        <Link
+                                            href={item.href}
+                                            className="relative group transition text-[#002060]"
+                                        >
                                             {item.name}
-                                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#002060] transition-all duration-300 group-hover:w-full"></span>
-                                        </a>
+                                            <span
+                                                className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${pathname === item.href
+                                                        ? 'w-full bg-yellow-400'
+                                                        : 'w-0 group-hover:w-full bg-[#002060]'
+                                                    }`}
+                                            ></span>
+                                        </Link>
                                     </li>
                                 )
                             )}
@@ -138,9 +170,12 @@ export default function Navbar() {
                                                 {item.name} <FaAngleDown size={12} />
                                             </summary>
                                             <ul className="ml-4 mt-2 space-y-2">
+                                                <li>
+                                                    <Link href={item.href}>{item.name}</Link>
+                                                </li>
                                                 {item.dropdown.map((sub) => (
                                                     <li key={sub.name}>
-                                                        <a href={sub.href}>{sub.name}</a>
+                                                        <Link href={sub.href}>{sub.name}</Link>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -148,7 +183,7 @@ export default function Navbar() {
                                     </li>
                                 ) : (
                                     <li key={item.name}>
-                                        <a href={item.href}>{item.name}</a>
+                                        <Link href={item.href}>{item.name}</Link>
                                     </li>
                                 )
                             )}
