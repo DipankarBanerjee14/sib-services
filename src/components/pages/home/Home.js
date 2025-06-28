@@ -15,8 +15,8 @@ const Home = () => {
         <main className="flex flex-col">
             <HeroSlider />
             <AboutPreview />
-            <ExperienceStats />
             <MissionVision />
+            <ExperienceStats />
             <Services />
             <TestimonialSlider />
         </main>
