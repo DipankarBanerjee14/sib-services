@@ -12,7 +12,7 @@ export default function ExperienceStats() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="bg-blue-900 p-8 rounded-xl text-center text-white">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-10">
-                        Serving Since <span className="text-yellow-300">39+ Years</span>
+                        Serving Since <span className="text-yellow-300">12+ Years</span>
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
