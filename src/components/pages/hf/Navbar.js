@@ -52,20 +52,20 @@ export default function Navbar() {
                 <div className="bg-[#002060] text-white py-2 text-xs sm:text-sm">
                     <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                         <div className="flex items-center gap-4 sm:gap-6">
-                            <div className="flex items-center gap-1">
+                            {/* <div className="flex items-center gap-1">
                                 <FaPhoneAlt className="text-xs sm:text-sm" />
                                 <span>+918069200100</span>
-                            </div>
+                            </div> */}
                             <div className="flex items-center gap-1">
                                 <FaEnvelope className="text-xs sm:text-sm" />
                                 <span>hrp@hrpmanagement.in</span>
                             </div>
                         </div>
-                        <div className="flex gap-2 sm:gap-4">
+                        {/* <div className="flex gap-2 sm:gap-4">
                             <FaFacebookF className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
                             <FaTwitter className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
                             <FaLinkedinIn className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )}
@@ -142,7 +142,7 @@ export default function Navbar() {
                             )}
                             <li>
                                 <a
-                                    href="tel:08069200100"
+                                    href="#"
                                     className="flex items-center gap-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
                                 >
                                     <FaPhone className="text-sm" /> Call Us
@@ -190,7 +190,7 @@ export default function Navbar() {
                             )}
                             <li>
                                 <a
-                                    href="tel:08069200100"
+                                    href="#"
                                     className="inline-block mt-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
                                 >
                                     <FaPhone className="inline mr-2" /> Call Us

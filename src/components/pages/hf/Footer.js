@@ -51,24 +51,24 @@ export default function Footer() {
                 {/* Contact Info */}
                 <div className="flex flex-col items-center md:items-start space-y-3 text-sm">
                     <h3 className="text-yellow-400 text-lg font-semibold mb-2">Contact</h3>
-                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Kolkata, India</p>
-                    <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p>
+                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Kolkata, WB, India</p>
+                    {/* <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p> */}
                     <p className="flex items-center"><FaEnvelope className="mr-2" /> hrp@hrpmanagement.in</p>
                 </div>
 
                 {/* Social Media */}
-                <div className="flex flex-col items-center md:items-start">
+                {/* <div className="flex flex-col items-center md:items-start">
                     <h3 className="text-yellow-400 text-lg font-semibold mb-2">Follow Us</h3>
                     <div className="flex space-x-5 text-xl mt-2">
-                        <a href="#"><FaFacebook /></a>
-                        <a href="#"><FaLinkedin /></a>
-                        <a href="#"><FaTwitter /></a>
+                        <a href="#"><FaFacebook className="hover:text-yellow-400" /></a>
+                        <a href="#"><FaLinkedin className="hover:text-yellow-400" /></a>
+                        <a href="#"><FaTwitter className="hover:text-yellow-400" /></a>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="border-t border-white/20 mt-12 pt-6 text-sm text-center">
-                © {new Date().getFullYear()} S & IB Services. All rights reserved. Powered by <a href="https://cyberspaceworks.in/" className="text-yellow-300 hover:underline">Cyberspace Works</a>.
+                © {new Date().getFullYear()} HRP Management. All rights reserved. Powered by Pro-Riterz.
             </div>
         </footer>
     );
