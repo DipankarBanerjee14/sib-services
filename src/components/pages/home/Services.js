@@ -1,112 +1,112 @@
-// src/components/OurServices.js
 import {
-    FaShieldAlt,
-    FaUserShield,
     FaBuilding,
-    FaUsersCog,
+    FaUsers,
     FaMoneyCheckAlt,
-    FaUserTie,
-    FaTruckMoving,
-    FaBoxes,
+    FaTruck,
     FaBroom,
+    FaBug,
+    FaFireExtinguisher,
     FaVideo,
-    FaHome,
+    FaPeopleCarry,
+    FaBoxes,
+    FaWarehouse,
     FaRecycle,
-    FaCalendarCheck,
-    FaUserSecret,
     FaCity,
+    FaToolbox,
+    FaNetworkWired,
 } from 'react-icons/fa';
+import Link from 'next/link';
 
 const services = [
     {
-        icon: <FaShieldAlt size={32} />,
-        title: 'Corporate security services',
+        title: "Integrated Facility Management",
         description:
-            'Comprehensive security solutions tailored for businesses, including risk assessment, personnel deployment, and system implementation.',
-    },
-    {
-        icon: <FaUserShield size={32} />,
-        title: 'Security guard services',
-        description:
-            'Trained security personnel offering 24/7 protection, access control, and patrol services.',
-    },
-    {
+            "Housekeeping, pest control, maintenance, and security in one seamless solution to cut costs and boost efficiency.",
         icon: <FaBuilding size={32} />,
-        title: 'Integrated facility management',
-        description:
-            'End-to-end facility management, including maintenance, security, cleaning, and operational support.',
     },
     {
-        icon: <FaUsersCog size={32} />,
-        title: 'Manpower outsourcing company',
+        title: "Manpower Outsourcing Services",
         description:
-            'Staffing solutions for various sectors, including recruitment, training, and workforce management.',
+            "Get trained office staff and technicians through our flexible outsourcing program.",
+        icon: <FaUsers size={32} />,
     },
     {
+        title: "Payroll Management Services",
+        description:
+            "Streamlined payroll processing to minimize errors and ensure timely employee payments.",
         icon: <FaMoneyCheckAlt size={32} />,
-        title: 'Payroll management services',
-        description:
-            'Payroll processing with tax handling, payslip generation, and compliance assurance.',
     },
     {
-        icon: <FaUserTie size={32} />,
-        title: 'Manpower supply agency',
+        title: "Logistics & Transportation Services",
         description:
-            'Supply of skilled and unskilled personnel for both short- and long-term staffing needs.',
+            "Reliable warehousing, transport coordination, and delivery services customized for businesses.",
+        icon: <FaTruck size={32} />,
     },
     {
-        icon: <FaTruckMoving size={32} />,
-        title: 'Logistics transportation services',
+        title: "Housekeeping Services",
         description:
-            'Transport solutions including fleet management, tracking systems, and timely delivery.',
-    },
-    {
-        icon: <FaBoxes size={32} />,
-        title: 'B2B logistics company',
-        description:
-            'Warehousing, distribution, and supply chain management tailored for businesses.',
-    },
-    {
+            "Maintain hygiene and cleanliness in work and residential spaces with personalized care.",
         icon: <FaBroom size={32} />,
-        title: 'Housekeeping services',
-        description:
-            'Professional commercial/residential cleaning with regular and deep-clean protocols.',
     },
     {
+        title: "Pest Control Services",
+        description:
+            "Eco-friendly, certified pest removal solutions that protect people and property.",
+        icon: <FaBug size={32} />,
+    },
+    {
+        title: "Fire Safety & Evacuation Services",
+        description:
+            "Installations, checks, and emergency plans for fire safety and compliance.",
+        icon: <FaFireExtinguisher size={32} />,
+    },
+    {
+        title: "CCTV & Central Monitoring Systems",
+        description:
+            "Surveillance setups with real-time alerts, remote access, and recording.",
         icon: <FaVideo size={32} />,
-        title: 'Electronic surveillance services',
-        description:
-            'Installation and monitoring of CCTV and alarm systems for 24/7 security.',
     },
     {
-        icon: <FaHome size={32} />,
-        title: 'Property management company',
+        title: "Manpower Supply Services",
         description:
-            'Real estate asset management including maintenance, tenants, and rent collection.',
+            "Trained, adaptive staff for long and short-term staffing across industries.",
+        icon: <FaPeopleCarry size={32} />,
     },
     {
+        title: "B2B Logistics Services",
+        description:
+            "Handle raw materials and finished goods efficiently with supply chain visibility.",
+        icon: <FaBoxes size={32} />,
+    },
+    {
+        title: "Property Management Services",
+        description:
+            "End-to-end property services: maintenance, inspections, rent collection, and vendor management.",
+        icon: <FaWarehouse size={32} />,
+    },
+    {
+        title: "Waste Management Services",
+        description:
+            "Eco-conscious waste pickup and sorting for residential, commercial, and industrial clients.",
         icon: <FaRecycle size={32} />,
-        title: 'Waste management company',
-        description:
-            'Eco-friendly collection, recycling, and disposal with regulatory compliance.',
     },
     {
-        icon: <FaCalendarCheck size={32} />,
-        title: 'Event management company',
+        title: "Facade Cleaning Services",
         description:
-            'Planning and execution of corporate and social events from venue to logistics.',
-    },
-    {
-        icon: <FaUserSecret size={32} />,
-        title: 'Bouncer security services',
-        description:
-            'Crowd control and high-profile event security personnel ensuring safety and decorum.',
-    },
-    {
+            "Deep cleaning of building exteriors to improve longevity and visual appeal.",
         icon: <FaCity size={32} />,
-        title: 'Facade cleaning services',
+    },
+    {
+        title: "Plumbing & Electrical Maintenance",
         description:
-            'Advanced cleaning of building exteriors for long-term structural and aesthetic integrity.',
+            "Prevent leaks and malfunctions with reliable on-demand system maintenance.",
+        icon: <FaToolbox size={32} />,
+    },
+    {
+        title: "Optical Fibre & Telecom Tower Services",
+        description:
+            "Setup and maintenance of fiber cables and telecom towers with safety focus.",
+        icon: <FaNetworkWired size={32} />,
     },
 ];
 
@@ -118,7 +118,7 @@ export default function OurServices() {
                     Our Services
                 </h2>
                 <p className="text-center text-lg mb-12 max-w-3xl mx-auto text-gray-800">
-                    We provide end-to-end facility, security, banking, logistics, and utility support solutions for corporates across India.
+                    We provide end-to-end facility, security, banking, logistics, and utility support solutions for corporates across India. Here are a few of our key services:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
@@ -132,8 +132,16 @@ export default function OurServices() {
                         </div>
                     ))}
                 </div>
+
+                {/* CTA Button */}
+                <div className="text-center mt-12">
+                    <Link href="/services">
+                        <span className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+                            View All Services
+                        </span>
+                    </Link>
+                </div>
             </div>
         </section>
     );
 }
-  

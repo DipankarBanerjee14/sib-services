@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-900 text-white px-6 py-16">
+        <footer className="bg-[#002060] text-white px-6 py-16">
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-y-12 gap-x-16 text-center md:text-left">
 
                 {/* Logo + Description */}
@@ -30,7 +30,7 @@ export default function Footer() {
                         <li><Link href="/" className="hover:text-yellow-300">Home</Link></li>
                         <li><Link href="/services" className="hover:text-yellow-300">Services</Link></li>
                         <li><Link href="/careers" className="hover:text-yellow-300">Careers</Link></li>
-                        <li><Link href="/locations" className="hover:text-yellow-300">Locations</Link></li>
+                        
                         <li><Link href="/contact" className="hover:text-yellow-300">Contact Us</Link></li>
                     </ul>
                 </div>
@@ -40,10 +40,10 @@ export default function Footer() {
                     <h3 className="text-yellow-400 text-lg font-semibold mb-2">About</h3>
                     <ul className="space-y-1 text-sm">
                         <li><Link href="/about" className="hover:text-yellow-300">About Us</Link></li>
-                        <li><Link href="/about/statutory" className="hover:text-yellow-300">Statutory Compliance</Link></li>
+                        
                         <li><Link href="/about/training" className="hover:text-yellow-300">Training & Development</Link></li>
                         <li><Link href="/about/csr" className="hover:text-yellow-300">Corporate Social Responsibility</Link></li>
-                        <li><Link href="/about/mission" className="hover:text-yellow-300">Mission & Vision</Link></li>
+                        <li><Link href="/about/ourpeople" className="hover:text-yellow-300">Our People</Link></li>
                     </ul>
                 </div>
 

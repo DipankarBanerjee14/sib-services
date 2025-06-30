@@ -35,13 +35,13 @@ export default function Navbar() {
             name: 'About Us',
             href: '/about',
             dropdown: [
-                { name: 'Statutory Compliance', href: '/about/statutory' },
+                
                 { name: 'Training & Development', href: '/about/training' },
                 { name: 'Corporate Social Responsibility', href: '/about/csr' },
-                { name: 'Mission & Vision', href: '/about/mission' },
+                { name: 'Our People', href: '/about/ourpeople' },
             ],
         },
-        { name: 'Locations', href: '/locations' },
+        
         { name: 'Contact Us', href: '/contact' },
     ];
 
