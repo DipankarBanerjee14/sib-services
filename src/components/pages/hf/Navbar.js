@@ -49,26 +49,27 @@ export default function Navbar() {
         <>
             {/* Top Bar */}
             {!isScrolled && (
-                <div className="bg-[#002060] text-white py-2 text-sm">
+                <div className="bg-[#002060] text-white py-2 text-xs sm:text-sm">
                     <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                        <div className="flex items-center gap-6">
+                        <div className="flex items-center gap-4 sm:gap-6">
                             <div className="flex items-center gap-1">
-                                <FaPhoneAlt />
-                                <span>+91-8069200100</span>
+                                <FaPhoneAlt className="text-xs sm:text-sm" />
+                                <span>+918069200100</span>
                             </div>
                             <div className="flex items-center gap-1">
-                                <FaEnvelope />
-                                <span>sib@sibservices.in</span>
+                                <FaEnvelope className="text-xs sm:text-sm" />
+                                <span>hrp@hrpmanagement.in</span>
                             </div>
                         </div>
-                        <div className="flex gap-4">
-                            <FaFacebookF className="hover:text-yellow-400 cursor-pointer" />
-                            <FaTwitter className="hover:text-yellow-400 cursor-pointer" />
-                            <FaLinkedinIn className="hover:text-yellow-400 cursor-pointer" />
+                        <div className="flex gap-2 sm:gap-4">
+                            <FaFacebookF className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
+                            <FaTwitter className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
+                            <FaLinkedinIn className="hover:text-yellow-400 cursor-pointer text-xs sm:text-sm" />
                         </div>
                     </div>
                 </div>
             )}
+
 
             {/* Navbar */}
             <nav

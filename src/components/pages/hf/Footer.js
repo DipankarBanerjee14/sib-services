@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import Link from 'next/link';
 
+
 export default function Footer() {
     return (
         <footer className="bg-[#002060] text-white px-6 py-16">
@@ -52,7 +53,7 @@ export default function Footer() {
                     <h3 className="text-yellow-400 text-lg font-semibold mb-2">Contact</h3>
                     <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Kolkata, India</p>
                     <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p>
-                    <p className="flex items-center"><FaEnvelope className="mr-2" /> info@sibservices.in</p>
+                    <p className="flex items-center"><FaEnvelope className="mr-2" /> hrp@hrpmanagement.in</p>
                 </div>
 
                 {/* Social Media */}
