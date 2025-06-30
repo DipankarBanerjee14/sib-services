@@ -1,80 +1,66 @@
+// app/api/careers/route.js
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import formidable from "formidable";
-import fs from "fs";
 
-// Required to disable Next.js default body parsing
 export const config = {
     api: {
         bodyParser: false,
     },
+    runtime: "nodejs",
 };
-
-// Helper to parse the incoming multipart/form-data
-function parseForm(req) {
-    return new Promise((resolve, reject) => {
-        const form = formidable({ multiples: false, keepExtensions: true });
-
-        form.parse(req, (err, fields, files) => {
-            if (err) return reject(err);
-            resolve({ fields, files });
-        });
-    });
-}
 
 export async function POST(req) {
     try {
-        const { fields, files } = await parseForm(req);
+        const formData = await req.formData();
 
-        const {
-            job,
-            name,
-            phone,
-            email,
-            address,
-            gender,
-            qualification,
-        } = fields;
+        const job = formData.get("job");
+        const name = formData.get("name");
+        const phone = formData.get("phone");
+        const email = formData.get("email");
+        const address = formData.get("address");
+        const gender = formData.get("gender");
+        const qualification = formData.get("qualification");
+        const cvFile = formData.get("cv");
 
-        const cv = files.cv;
+        if (!cvFile || typeof cvFile === "string") {
+            throw new Error("Invalid CV file");
+        }
+
+        const arrayBuffer = await cvFile.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
 
         const transporter = nodemailer.createTransport({
-            service: "Gmail",
+            service: "gmail",
             auth: {
-                user: process.env.EMAIL_USER,      // your gmail
-                pass: process.env.EMAIL_PASS,      // app password
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
-        const mailOptions = {
-            from: `"Career Form" <${process.env.EMAIL_USER}>`,
-            to: process.env.RECEIVER_EMAIL,      // your receiving email (can be same as above)
-            subject: `New Job Application for ${job}`,
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_TO,
+            subject: `New Career Application from ${name}`,
             text: `
-        Job Applied For: ${job}
-        Name: ${name}
-        Phone: ${phone}
-        Email: ${email}
-        Address: ${address}
-        Gender: ${gender}
-        Qualification: ${qualification}
+Job: ${job}
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Address: ${address}
+Gender: ${gender}
+Qualification: ${qualification}
       `,
             attachments: [
                 {
-                    filename: cv.originalFilename,
-                    path: cv.filepath,
+                    filename: cvFile.name,
+                    content: buffer,
                 },
             ],
-        };
-
-        await transporter.sendMail(mailOptions);
+        });
 
         return NextResponse.json({ success: true });
     } catch (error) {
-        console.error("Career submission error:", error);
-        return NextResponse.json(
-            { error: "Something went wrong. Please try again later." },
-            { status: 500 }
-        );
+        console.error("Career form error:", error);
+        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
     }
 }
