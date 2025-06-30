@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "S&IB Services Private Limited",
-  description: "Best Security Service in Kolkata",
+  title: "HRP Management",
+  description: "Best Manpower Service Provider in Kolkata",
 };
 
 export default function RootLayout({ children }) {
