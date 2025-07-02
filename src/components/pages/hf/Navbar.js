@@ -117,7 +117,7 @@ export default function Navbar() {
                     </ul>
 
                     {/* Mobile Toggle */}
-                    <div className="md:hidden max-w-[78rem] mx-auto">
+                    <div className="md:hidden">
                         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                         </button>
