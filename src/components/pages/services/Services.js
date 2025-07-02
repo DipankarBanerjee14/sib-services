@@ -29,7 +29,7 @@ export default function Services() {
         {
             title: "Integrated Facility Management",
             description:
-                "Housekeeping, pest control, maintenance, and security in one seamless solution to cut costs and boost efficiency.",
+                "Housekeeping, pest control and maintenance in one seamless solution to cut costs and boost efficiency.",
             icon: <FaBuilding />,
         },
         {
