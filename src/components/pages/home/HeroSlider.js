@@ -28,7 +28,7 @@ const slides = [
 export default function HeroSlider() {
     return (
         <div className="relative px-4 sm:px-6 lg:px-8 py-6 bg-[#dedede]">
-            <div className="rounded-xl overflow-hidden shadow-lg h-[76vh] max-w-[78rem]  mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-lg h-[78vh] max-w-[78rem]  mx-auto">
                 <Swiper
                     modules={[Autoplay, Pagination, EffectFade]}
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
