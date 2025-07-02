@@ -10,7 +10,7 @@ import Image from 'next/image';
 const slides = [
     {
         image: '/images/hero1.png',
-        title: 'SIB Services',
+        title: 'HRP Services',
         subtitle: 'Facility Management with Excellence',
     },
     {
@@ -27,7 +27,7 @@ const slides = [
 
 export default function HeroSlider() {
     return (
-        <div className="relative h-[90vh]">
+        <div className="relative h-[82vh]">
             <Swiper
                 modules={[Autoplay, Pagination, EffectFade]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}

@@ -9,16 +9,18 @@ export async function POST(req) {
         }
 
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: process.env.EMAIL_HOST, // e.g., smtppro.zoho.in
+            port: parseInt(process.env.EMAIL_PORT || "465"),
+            secure: true, // SSL
             auth: {
-                user: process.env.EMAIL_USER, // Gmail address
-                pass: process.env.EMAIL_PASS, // App password
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
         const mailOptions = {
-            from: email,
-            to: 'banerjeedipankar761@gmail.com',
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_TO, // Can be same as EMAIL_USER or another address
             subject: `HRP Website Contact Form - From ${firstName} ${lastName}`,
             html: `
         <h2>New Inquiry Received</h2>

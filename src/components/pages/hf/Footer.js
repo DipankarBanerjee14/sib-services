@@ -7,6 +7,8 @@ import {
     FaTwitter,
 } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export default function Footer() {
@@ -17,10 +19,16 @@ export default function Footer() {
                 {/* Logo + Description */}
                 <div className="flex flex-col items-center md:items-start max-w-sm">
                     <div className="bg-white rounded-xl p-3 mb-4">
-                        <img src="/images/sib-logo.webp" alt="SIB Logo" className="h-12 w-auto" />
+                        <Image
+                            src="/images/logo.png"
+                            alt="SIB Logo"
+                            width={100}
+                            height={100}
+                            className="h-12 w-auto"
+                        />
                     </div>
                     <p className="text-sm leading-relaxed">
-                        Trusted provider of security, facility, and manpower solutions across India since 1985.
+                        Trusted provider of security, facility, and manpower solutions across India since 2013.
                     </p>
                 </div>
 
@@ -53,7 +61,9 @@ export default function Footer() {
                     <h3 className="text-yellow-400 text-lg font-semibold mb-2">Contact</h3>
                     <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Sarat Bose Road, Kolkata</p>
                     {/* <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p> */}
-                    <p className="flex items-center"><FaEnvelope className="mr-2" /> hrp@hrpmanagement.in</p>
+                    <p className="flex items-center"><FaEnvelope className="mr-2" /> <a href="mailto:hrp@hrpmanagement.in" className="hover:underline">
+                        hrp@hrpmanagement.in
+                    </a></p>
                 </div>
 
                 {/* Social Media */}

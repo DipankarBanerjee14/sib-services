@@ -2,113 +2,85 @@ import {
     FaBuilding,
     FaUsers,
     FaMoneyCheckAlt,
-    FaTruck,
-    FaBroom,
-    FaBug,
-    FaFireExtinguisher,
-    FaVideo,
     FaPeopleCarry,
+    FaTruck,
     FaBoxes,
+    FaBroom,
     FaWarehouse,
     FaRecycle,
+    FaCalendarCheck,
     FaCity,
-    FaToolbox,
-    FaNetworkWired,
 } from 'react-icons/fa';
 import Link from 'next/link';
 
 const services = [
     {
-        title: "Integrated Facility Management",
+        title: "Integrated Facility Management Services",
         description:
-            "Housekeeping, pest control, maintenance, and security in one seamless solution to cut costs and boost efficiency.",
+            "We provide experts to manage your facility operations—maintenance, cleaning, and daily tasks—helping you streamline processes, and reduce costs.",
         icon: <FaBuilding size={32} />,
     },
     {
-        title: "Manpower Outsourcing Services",
+        title: "Manpower Outsourcing",
         description:
-            "Get trained office staff and technicians through our flexible outsourcing program.",
+            "We handle recruitment, training, and deployment of your workforce, letting you reduce admin overhead and improve operational efficiency.",
         icon: <FaUsers size={32} />,
     },
     {
-        title: "Payroll Management Services",
+        title: "Payroll Management",
         description:
-            "Streamlined payroll processing to minimize errors and ensure timely employee payments.",
+            "We take over salary calculations, tax deductions, payslip generation, and ensure complete compliance—removing the monthly payroll hassle.",
         icon: <FaMoneyCheckAlt size={32} />,
     },
     {
-        title: "Logistics & Transportation Services",
+        title: "Manpower Supply",
         description:
-            "Reliable warehousing, transport coordination, and delivery services customized for businesses.",
+            "Get skilled, semi-skilled, and unskilled staff across industries—available for long-term or project-based requirements.",
+        icon: <FaPeopleCarry size={32} />,
+    },
+    {
+        title: "Logistics & Transportation",
+        description:
+            "We ensure timely, safe, and efficient delivery of goods using optimized routes and real-time fleet tracking systems.",
         icon: <FaTruck size={32} />,
+    },
+    {
+        title: "B2B Logistics",
+        description:
+            "Simplify backend processes with scalable logistics: warehousing, distribution, and end-to-end supply chain visibility.",
+        icon: <FaBoxes size={32} />,
     },
     {
         title: "Housekeeping Services",
         description:
-            "Maintain hygiene and cleanliness in work and residential spaces with personalized care.",
+            "Efficient and reliable cleaning for offices, commercial spaces, and residences—regular upkeep, deep cleaning, and sanitation.",
         icon: <FaBroom size={32} />,
     },
     {
-        title: "Pest Control Services",
+        title: "Property Management",
         description:
-            "Eco-friendly, certified pest removal solutions that protect people and property.",
-        icon: <FaBug size={32} />,
-    },
-    {
-        title: "Fire Safety & Evacuation Services",
-        description:
-            "Installations, checks, and emergency plans for fire safety and compliance.",
-        icon: <FaFireExtinguisher size={32} />,
-    },
-    {
-        title: "CCTV & Central Monitoring Systems",
-        description:
-            "Surveillance setups with real-time alerts, remote access, and recording.",
-        icon: <FaVideo size={32} />,
-    },
-    {
-        title: "Manpower Supply Services",
-        description:
-            "Trained, adaptive staff for long and short-term staffing across industries.",
-        icon: <FaPeopleCarry size={32} />,
-    },
-    {
-        title: "B2B Logistics Services",
-        description:
-            "Handle raw materials and finished goods efficiently with supply chain visibility.",
-        icon: <FaBoxes size={32} />,
-    },
-    {
-        title: "Property Management Services",
-        description:
-            "End-to-end property services: maintenance, inspections, rent collection, and vendor management.",
+            "Boost property value and returns with expert management—tenant relations, rent collection, maintenance, and marketing.",
         icon: <FaWarehouse size={32} />,
     },
     {
-        title: "Waste Management Services",
+        title: "Waste Management",
         description:
-            "Eco-conscious waste pickup and sorting for residential, commercial, and industrial clients.",
+            "We handle collection, segregation, recycling, and eco-friendly disposal—aligned with environmental regulations and green practices.",
         icon: <FaRecycle size={32} />,
     },
     {
-        title: "Facade Cleaning Services",
+        title: "Event Management",
         description:
-            "Deep cleaning of building exteriors to improve longevity and visual appeal.",
+            "From venue selection to on-site logistics—we manage your social or corporate events with precision and creativity.",
+        icon: <FaCalendarCheck size={32} />,
+    },
+    {
+        title: "Facade Cleaning",
+        description:
+            "We preserve your property’s aesthetics using advanced equipment and safe chemicals for long-term facade care.",
         icon: <FaCity size={32} />,
     },
-    {
-        title: "Plumbing & Electrical Maintenance",
-        description:
-            "Prevent leaks and malfunctions with reliable on-demand system maintenance.",
-        icon: <FaToolbox size={32} />,
-    },
-    {
-        title: "Optical Fibre & Telecom Tower Services",
-        description:
-            "Setup and maintenance of fiber cables and telecom towers with safety focus.",
-        icon: <FaNetworkWired size={32} />,
-    },
-];
+  ];
 
 export default function OurServices() {
     return (
@@ -117,8 +89,8 @@ export default function OurServices() {
                 <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-4">
                     Our Services
                 </h2>
-                <p className="text-center text-lg mb-12 max-w-3xl mx-auto text-gray-800">
-                    We provide end-to-end facility, security, banking, logistics, and utility support solutions for corporates across India. Here are a few of our key services:
+                <p className="text-center text-lg mb-12 max-w-7xl mx-auto text-gray-800">
+                    Our main priority at HRP Management is to provide you with all kinds of services, be it to run a business or take care of a property. Hence, you can relax knowing every step our professionals take is centered around professionalism, precision, and people-first values. From staffing to logistics, we bring efficiency to every corner of your business!
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
@@ -127,7 +99,7 @@ export default function OurServices() {
                             className="bg-blue-900 p-6 rounded-xl text-white shadow hover:shadow-md transition duration-300 transform hover:scale-105"
                         >
                             <div className="text-yellow-400 mb-4">{service.icon}</div>
-                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                            <h3 className=" font-semibold mb-2">{service.title}</h3>
                             <p className="text-sm text-gray-300">{service.description}</p>
                         </div>
                     ))}

@@ -19,13 +19,12 @@ export default function AboutPreview() {
 
                     {/* Text Side */}
                     <div>
-                        <h2 className="text-4xl font-bold text-blue-900 mb-4">Who We Are</h2>
-                        <h3 className="text-xl font-semibold text-yellow-500 mb-4">About Us</h3>
+                        <h2 className="text-4xl font-bold text-blue-900 mb-4">About Us</h2>
+                        <h3 className="text-xl font-semibold text-yellow-500 mb-4">Who Are We?</h3>
                         <p className="text-gray-800 mb-4 leading-relaxed">
-                            At HRP Management, we consistently take steps to improve our performance each year, as we strive for long-term sustainability and client satisfaction. We are proud and efficient providers of Integrated Facility Management, Security Services, Manpower Outsourcing, Logistics, Payroll Support, and more. Our establishment was founded on November 8, 2013, under the trusted leadership of Mr. Shyamal Karmakar. While we operate independently, our foundation is built on the same leadership values and vision that guided the growth of S&IB.
-                        </p>
+                            HRP Management Private Limited is a reliable service provider you can trust when hiring various facilities for your home, office, or industrial space. With our assistance, you can access Integrated Facility Management, Payroll Services, Outsourced Banking Operations, Optical Fibre Cable Laying, and many more. We have been an established part of the industry since 2013, which has allowed us to broaden our presence across India. Rest assured that we can rescue you in various sectors with our trained and responsive workforce.                        </p>
                         <p className="text-gray-800 mb-6 leading-relaxed">
-                            You can visit us at our registered office at Sarat Bose Road, Kolkata, India, if you wish to have a conversation with us in person. HRP Management has a strong presence throughout India, so you can have access to our solutions from anywhere in the nation. We strive to incorporate various kinds of professionals from diverse domains, including ex-servicemen from the defense sector, security experts, administrative personnel, and specialists in banking and logistics operations. This team of experienced individuals from different fields is one of our key strengths because it helps us provide reliable, flexible, and customer-friendly services, regardless of the industry you are a part of.
+                            Mr. Shyamal Karmakar, our dependable founder, still continues as the Managing Director of HRP Management. We take pride in only bringing in experienced and educated professionals from diverse backgrounds to make sure you do not have to worry about the quality of the facilities. Before hiring an expert, we thoroughly check their understanding of telecommunications, banking, engineering, logistics, disaster management, and administration. New ideas and growing talent are our biggest focus, so at HRP Management, we do everything we can to keep our team flexible, updated, and ready for the future with appropriate training!
                         </p>
                         <a
                             href="/about"

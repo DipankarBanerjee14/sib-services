@@ -1,4 +1,3 @@
-// app/api/careers/route.js
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -30,7 +29,9 @@ export async function POST(req) {
         const buffer = Buffer.from(arrayBuffer);
 
         const transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: process.env.EMAIL_HOST, // smtppro.zoho.in
+            port: parseInt(process.env.EMAIL_PORT || "465"),
+            secure: true, // true for SSL
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
@@ -61,6 +62,9 @@ Qualification: ${qualification}
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error("Career form error:", error);
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+        return NextResponse.json(
+            { success: false, error: error.message },
+            { status: 500 }
+        );
     }
 }

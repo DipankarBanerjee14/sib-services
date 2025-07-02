@@ -12,9 +12,15 @@ export default function MissionVision() {
                             <FaBullseye size={28} className="text-yellow-400" />
                             <h3 className="text-2xl font-bold text-white">Our Mission</h3>
                         </div>
+                        <p className="text-yellow-400">Our mission at HRP Management does not just revolve around delivering quality facility services, we also want to make a lasting impact on our customers that is backed by our commitment to excellence, inclusion, and innovation. We want to offer scalable solutions so that every organization in India can reach out to us in any situation. Our mission includes:</p>
+
                         <ul className="text-gray-200 list-disc pl-6 space-y-2 mb-4">
-                            <li>HRP promises to increase its staff-strength to 50,000 by 2025 providing employment to underprivileged youth of India.</li>
-                            <li>HRP has a strong Brand Value and Goodwill and is a Trusted Name in the service industry. Its motto, “Any Service? Call HRP”, is backed by solid performance and readiness to expand its area of services to meet ever-changing customer needs.</li>
+                            <li>We want to make every possible effort to grow our team as much as possible by 2025 and provide employment opportunities to underprivileged youth, helping them build a brighter and more promising future.</li>
+                            <li>At HRP Management, our goal is to grow the business to ₹1,000 Crore in revenue by 2025 by consistently delivering valuable services to clients across India.</li>
+                            <li>We continuously enhance our solutions and service quality to ensure our professionals and practices evolve with changing standards and remain effective over time.</li>
+                            <li>Our employees are regularly trained to stay updated with evolving technology and meet your expectations.</li>
+                            <li>Over the years, we have earned our clients&#39; trust with optimal work. Therefore, we are ready to expand our services to meet your ever-changing demands since we are driven by a strong commitment to support your firm.</li>
+
                         </ul>
 
                     </div>
@@ -30,11 +36,17 @@ export default function MissionVision() {
                     <div>
                         <div className="flex items-center gap-3 mb-4">
                             <FaBinoculars size={28} className="text-yellow-400" />
-                            <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+                            <h3 className="text-2xl font-bold text-white">Our Vision</h3>                            
                         </div>
+                        <p className="text-yellow-400">At HRP Management, we understand that our clients value transparency, empathy, and operational excellence above everything else. That is why these qualities are the core of every solution we offer. Our vision includes:</p>
+
                         <ul className="text-gray-300 list-disc pl-6 space-y-2 mb-4">
-                            <li>HRP is the most ethical, transparent, statutory compliant, CSR compliant, eco-friendly and humane service-company in India.</li>
-                            <li>HRP’s employees are the true face and Brand Ambassadors of the Company. We invest significantly in Human Capital and recognize our employees as the main drivers of our business growth.</li>
+                            <li>HRP aims to be one of India’s most ethical, transparent, and fully compliant service companies.</li>
+                            <li>We maintain strong CSR values and promote eco-friendly, socially responsible business practices.</li>
+                            <li>Our employees are the true ambassadors of our brand, so we value, respect, and invest in them constantly.</li>
+                            <li>We acknowledge the dedication of every team member and are committed to their well-being.</li>
+                            <li>Although we tend to dream big, our goals are achievable and grounded in focusing on quality and timely service delivery.</li>
+                            <li>Our trusted professionals are trained to consider every challenge as an opportunity to learn and grow, believing that nothing is impossible.</li>
                         </ul>
 
                     </div>
