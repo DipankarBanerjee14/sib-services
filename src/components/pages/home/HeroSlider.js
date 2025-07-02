@@ -34,7 +34,7 @@ const slides = [
 export default function HeroSlider() {
     return (
         <div className="relative px-4 sm:px-6 lg:px-8 py-6 bg-[#dedede]">
-            <div className="rounded-xl overflow-hidden shadow-lg h-[78vh] max-w-[78rem]  mx-auto">
+            <div className="hidden sm:block rounded-xl overflow-hidden shadow-lg h-[78vh] max-w-[78rem] mx-auto">
                 <Swiper
                     modules={[Autoplay, Pagination, EffectFade]}
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -53,7 +53,32 @@ export default function HeroSlider() {
                                     className="object-contain sm:object-cover"
                                     priority
                                 />
-                                
+
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+            <div className="block lg:hidden bg-gray-300 rounded-xl overflow-hidden shadow-lg h-[36vh] max-w-[78rem] mx-auto">
+                <Swiper
+                    modules={[Autoplay, Pagination, EffectFade]}
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    effect="fade"
+                    loop
+                    pagination={{ clickable: true }}
+                    className="h-full"
+                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="relative h-full w-full">
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    fill
+                                    className="object-contain sm:object-cover"
+                                    priority
+                                />
+
                             </div>
                         </SwiperSlide>
                     ))}
