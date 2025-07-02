@@ -5,11 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-    FaPhoneAlt,
-    FaEnvelope,
-    FaFacebookF,
-    FaTwitter,
-    FaLinkedinIn,
     FaPhone,
     FaAngleDown,
     FaBars,
@@ -20,10 +15,8 @@ export default function Navbar() {
     const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [hasMounted, setHasMounted] = useState(false);
 
     useEffect(() => {
-        setHasMounted(true);
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -45,129 +38,100 @@ export default function Navbar() {
         { name: 'Contact Us', href: '/contact' },
     ];
 
-    if (!hasMounted) return null; // prevent hydration mismatch
-
     return (
-        <>
-            {/* Top Bar with logo & email */}
-            {/* {!isScrolled && (
-                <div className="bg-[#002060] text-white text-xs sm:text-sm">
-                    <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-2">
-                        <div className="flex items-center gap-4">
-                            <div className="flex items-center gap-2">
-                                <FaEnvelope className="text-xs sm:text-sm" />
-                                <a href="mailto:hrp@hrpmanagement.in" className="hover:underline">
-                                    hrp@hrpmanagement.in
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )} */}
+        <nav className="sticky top-0 z-50 bg-transparent">
+            <div className="w-full md:max-w-[78rem] mx-auto mt-4 px-4 sm:px-6 bg-white rounded-xl shadow-lg">
+                <div className="flex justify-between items-center h-16 md:h-20">
+                    <Link href="/" className="flex items-center h-full">
+                        <Image
+                            src="/images/logo.png"
+                            alt="HRP Logo"
+                            width={120}
+                            height={120}
+                            className="w-[120px] h-auto object-contain"
+                            priority
+                        />
+                    </Link>
 
-            {/* Navbar */}
-            <nav
-                className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90'
-                    }`}
-            >
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex justify-between items-center h-16 md:h-20">
-                        <Link href="/" className="flex items-center h-full">
-                            <Image
-                                src="/images/logo.png"
-                                alt="HRP Logo"
-                                width={120}
-                                height={120}
-                                className="w-[120px] h-auto object-contain"
-                                priority
-                            />
-                        </Link>
-
-                        {/* Desktop Menu */}
-                        <ul className="hidden md:flex items-center gap-8 text-[#002060] font-semibold relative">
-                            {menuItems.map((item) =>
-                                item.dropdown ? (
-                                    <li key={item.name} className="relative group">
-                                        <Link
-                                            href={item.href}
-                                            className="flex items-center gap-1 relative group-hover:text-yellow-500 transition"
-                                        >
-                                            {item.name}
-                                            <FaAngleDown size={12} />
-                                            <span
-                                                className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${pathname === item.href
+                    {/* Desktop Menu */}
+                    <ul className="hidden md:flex items-center gap-8 text-[#002060] font-semibold relative">
+                        {menuItems.map((item) =>
+                            item.dropdown ? (
+                                <li key={item.name} className="relative group">
+                                    <Link
+                                        href={item.href}
+                                        className="flex items-center gap-1 relative group-hover:text-blue-700 transition"
+                                    >
+                                        {item.name}
+                                        <FaAngleDown size={12} />
+                                        <span
+                                            className={`absolute left-0 bottom-[-2px] h-0.5 transition-all duration-300 ${pathname === item.href
                                                     ? 'w-full bg-yellow-400'
-                                                    : 'w-0 group-hover:w-full bg-[#002060]'
-                                                    }`}
-                                            ></span>
-                                        </Link>
-                                        <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded z-10 w-64 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300">
-                                            {item.dropdown.map((sub) => (
-                                                <li key={sub.name}>
-                                                    <Link
-                                                        href={sub.href}
-                                                        className={`block px-4 py-2 text-[#002060] hover:bg-yellow-100 ${pathname === sub.href
-                                                            ? 'underline underline-offset-4 decoration-yellow-400'
-                                                            : ''
-                                                            }`}
-                                                    >
-                                                        {sub.name}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </li>
-                                ) : (
-                                    <li key={item.name}>
-                                        <Link
-                                            href={item.href}
-                                            className="relative group transition text-[#002060]"
-                                        >
-                                            {item.name}
-                                            <span
-                                                className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${pathname === item.href
+                                                    : 'w-0 group-hover:w-full bg-blue-600'
+                                                }`}
+                                        />
+                                    </Link>
+                                    <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded z-10 w-64 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300">
+                                        {item.dropdown.map((sub) => (
+                                            <li key={sub.name}>
+                                                <Link
+                                                    href={sub.href}
+                                                    className={`block px-4 py-2 text-[#002060] hover:bg-yellow-100 ${pathname === sub.href ? 'underline underline-offset-4 decoration-yellow-400' : ''
+                                                        }`}
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : (
+                                <li key={item.name}>
+                                    <Link
+                                        href={item.href}
+                                        className="relative group transition"
+                                    >
+                                        {item.name}
+                                        <span
+                                            className={`absolute left-0 bottom-[-2px] h-0.5 transition-all duration-300 ${pathname === item.href
                                                     ? 'w-full bg-yellow-400'
-                                                    : 'w-0 group-hover:w-full bg-[#002060]'
-                                                    }`}
-                                            ></span>
-                                        </Link>
-                                    </li>
-                                )
-                            )}
-                            <li>
-                                <a
-                                    href="#"
-                                    className="flex items-center gap-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
-                                >
-                                    <FaPhone className="text-sm" /> Call Us
-                                </a>
-                            </li>
-                        </ul>
+                                                    : 'w-0 group-hover:w-full bg-blue-600'
+                                                }`}
+                                        />
+                                    </Link>
+                                </li>
+                            )
+                        )}
+                        <li>
+                            <a
+                                href="#"
+                                className="flex items-center gap-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
+                            >
+                                <FaPhone className="text-sm" /> Call Us
+                            </a>
+                        </li>
+                    </ul>
 
-                        {/* Mobile Toggle */}
-                        <div className="md:hidden">
-                            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                                {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-                            </button>
-                        </div>
+                    {/* Mobile Toggle */}
+                    <div className="md:hidden">
+                        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                            {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                        </button>
                     </div>
                 </div>
 
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
-                    <div className="md:hidden bg-white shadow-md px-6 pb-4">
+                    <div className="md:hidden mt-2 bg-white px-4 py-4 rounded-b-xl shadow">
                         <ul className="flex flex-col gap-4 text-[#002060] font-semibold">
                             {menuItems.map((item) =>
                                 item.dropdown ? (
                                     <li key={item.name}>
-                                        <details>
-                                            <summary className="cursor-pointer flex items-center gap-1">
+                                        <details className="group">
+                                            <summary className="flex items-center gap-1 cursor-pointer">
                                                 {item.name} <FaAngleDown size={12} />
                                             </summary>
                                             <ul className="ml-4 mt-2 space-y-2">
-                                                <li>
-                                                    <Link href={item.href}>{item.name}</Link>
-                                                </li>
                                                 {item.dropdown.map((sub) => (
                                                     <li key={sub.name}>
                                                         <Link href={sub.href}>{sub.name}</Link>
@@ -178,7 +142,13 @@ export default function Navbar() {
                                     </li>
                                 ) : (
                                     <li key={item.name}>
-                                        <Link href={item.href}>{item.name}</Link>
+                                        <Link
+                                            href={item.href}
+                                            className={`block ${pathname === item.href ? 'text-yellow-500 underline' : ''
+                                                }`}
+                                        >
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 )
                             )}
@@ -193,7 +163,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                 )}
-            </nav>
-        </>
+            </div>
+        </nav>
     );
 }

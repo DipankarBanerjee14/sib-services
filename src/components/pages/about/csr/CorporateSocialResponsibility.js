@@ -1,7 +1,7 @@
 export default function CorporateSocialResponsibility() {
     return (
         <section className="py-16 px-6 bg-[#dedede] flex justify-center">
-            <div className="max-w-7xl bg-white shadow-lg rounded-lg p-8 md:p-12">
+            <div className="max-w-[78rem] bg-white shadow-lg rounded-lg p-8 md:p-12">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-blue-900 to-blue-600 text-transparent bg-clip-text mb-8 leading-tight">
                     Corporate Social Responsibility
                 </h1>

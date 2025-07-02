@@ -10,6 +10,7 @@ import {
     FaRecycle,
     FaCalendarCheck,
     FaCity,
+    FaArrowRight,
 } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -80,7 +81,12 @@ const services = [
             "We preserve your property’s aesthetics using advanced equipment and safe chemicals for long-term facade care.",
         icon: <FaCity size={32} />,
     },
-  ];
+    {
+        title: "Learn More",
+        isCTA: true,
+        icon: <FaArrowRight size={32} />,
+    },
+];
 
 export default function OurServices() {
     return (
@@ -93,27 +99,30 @@ export default function OurServices() {
                     Our main priority at HRP Management is to provide you with all kinds of services, be it to run a business or take care of a property. Hence, you can relax knowing every step our professionals take is centered around professionalism, precision, and people-first values. From staffing to logistics, we bring efficiency to every corner of your business!
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="bg-blue-900 p-6 rounded-xl text-white shadow hover:shadow-md transition duration-300 transform hover:scale-105"
-                        >
-                            <div className="text-yellow-400 mb-4">{service.icon}</div>
-                            <h3 className=" font-semibold mb-2">{service.title}</h3>
-                            <p className="text-sm text-gray-300">{service.description}</p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* CTA Button */}
-                <div className="text-center mt-12">
-                    <Link href="/services">
-                        <span className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-                            View All Services
-                        </span>
-                    </Link>
+                    {services.map((service, index) =>
+                        service.isCTA ? (
+                            <Link
+                                key={index}
+                                href="/services"
+                                className="bg-blue-900 text-white text-center flex flex-col items-center justify-center font-semibold p-6 rounded-xl shadow hover:bg-blue-700 hover:scale-105 transition duration-300 transform"
+                            >
+                                <div className="mb-4 text-yellow-400">{service.icon}</div>
+                                <h3 className="text-lg font-semibold">Learn More</h3>
+                            </Link>
+                        ) : (
+                            <div
+                                key={index}
+                                className="bg-blue-900 p-6 rounded-xl text-white shadow hover:shadow-md transition duration-300 transform hover:scale-105"
+                            >
+                                <div className="text-yellow-400 mb-4">{service.icon}</div>
+                                <h3 className="font-semibold mb-2">{service.title}</h3>
+                                <p className="text-sm text-gray-300">{service.description}</p>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </section>
     );
 }
+  

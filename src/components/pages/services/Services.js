@@ -177,7 +177,7 @@ export default function Services() {
             <h2 className="text-4xl font-bold text-center text-blue-900 mb-12">
                 Our Services
             </h2>
-            <p className="text-center max-w-7xl mx-auto text-gray-700 mb-12 leading-relaxed">
+            <p className="text-center max-w-[78rem] mx-auto text-gray-700 mb-12 leading-relaxed">
                 Feel free to rely on HRP Management whenever you need a full spectrum of reliable and customizable services.
                 You will be happy to know that we offer all-inclusive assistance in different sectors to take the burden off your shoulders with ease.
                 Whether you are seeking facility management solutions, skilled security staff, manpower outsourcing, logistics support, or additional services, we are there for you.
@@ -185,7 +185,7 @@ export default function Services() {
                 <br /><br />
                 <strong className="text-blue-900"> Here&apos;s everything we can do for you:</strong>
             </p>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-[78rem] mx-auto">
                 {services.map((service, index) => (
                     <div
                         key={index}

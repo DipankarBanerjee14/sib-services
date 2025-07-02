@@ -57,7 +57,7 @@ export default function Careers() {
 
     return (
         <section className="py-16 px-6 bg-[#dedede] text-blue-900 flex justify-center">
-            <div className="max-w-7xl w-full bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <div className="max-w-[78rem] w-full bg-white p-8 md:p-12 rounded-xl shadow-lg">
                 <h1 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-blue-900 to-blue-600 text-transparent bg-clip-text mb-8">
                     Careers at HRP Management
                 </h1>

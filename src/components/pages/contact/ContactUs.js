@@ -46,7 +46,7 @@ export default function ContactUs() {
 
     return (
         <section className="py-16 px-6 bg-[#dedede] text-center">
-            <div className="max-w-7xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <div className="max-w-[78rem] mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
                 <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Contact Us</h1>
                 <p className="text-gray-700 mb-6 text-lg">
                     HRP Management is here to assist you in selecting the right services for your business or residence.

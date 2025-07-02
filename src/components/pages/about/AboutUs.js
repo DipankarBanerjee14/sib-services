@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AboutUs() {
     return (
         <section className="py-16 px-4 bg-[#dedede]">
-            <div className="max-w-7xl mx-auto bg-white px-4 md:px-10 py-10 md:py-14 rounded-2xl shadow-lg">
+            <div className="max-w-[78rem] mx-auto bg-white px-4 md:px-10 py-10 md:py-14 rounded-2xl shadow-lg">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-blue-900 to-blue-600 text-transparent bg-clip-text mb-10">
                     About Us
                 </h1>

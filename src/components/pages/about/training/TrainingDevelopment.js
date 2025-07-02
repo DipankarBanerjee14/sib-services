@@ -1,7 +1,7 @@
 export default function TrainingDevelopment() {
     return (
         <section className="py-20 px-4 bg-[#dedede]">
-            <div className="max-w-screen-xl mx-auto bg-white py-10 md:py-14 rounded-2xl shadow-lg">
+            <div className="max-w-[78rem] mx-auto bg-white py-10 md:py-14 rounded-2xl shadow-lg">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-blue-900 to-blue-600 text-transparent bg-clip-text mb-10 leading-tight">
                     Training & Development
                 </h1>
