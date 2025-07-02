@@ -59,7 +59,7 @@ export default function HeroSlider() {
                     ))}
                 </Swiper>
             </div>
-            <div className="block lg:hidden bg-gray-300 rounded-xl overflow-hidden shadow-lg h-[30vh] max-w-[78rem] mx-auto">
+            <div className="block lg:hidden bg-gray-300 rounded-xl overflow-hidden shadow-lg h-[20vh] max-w-[78rem] mx-auto">
                 <Swiper
                     modules={[Autoplay, Pagination, EffectFade]}
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
