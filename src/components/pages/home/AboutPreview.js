@@ -8,7 +8,7 @@ export default function AboutPreview() {
                     {/* Image Side */}
                     <div className="m-0 p-0">
                         <Image
-                            src="/images/who3.webp"
+                            src="/images/who.png"
                             alt="About SIB"
                             width={600}
                             height={400}
