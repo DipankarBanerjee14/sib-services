@@ -117,7 +117,7 @@ export default function Navbar() {
                     </ul>
 
                     {/* Mobile Toggle */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center">
                         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                         </button>
