@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function AboutPreview() {
     return (
-        <section id="about" className="bg-[#dedede] py-16">
+        <section id="about" className="bg-[#dedede] mb-10">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                     {/* Image Side */}
@@ -20,7 +20,7 @@ export default function AboutPreview() {
                     {/* Text Side */}
                     <div>
                         <h2 className="text-4xl font-bold text-blue-900 mb-4">About Us</h2>
-                        <h3 className="text-xl font-semibold text-yellow-500 mb-4">Who Are We?</h3>
+                        <h3 className="text-xl font-semibold text-orange-500 mb-4">Who Are We?</h3>
                         <p className="text-gray-800 mb-4 leading-relaxed">
                             HRP Management Private Limited is a reliable service provider you can trust when hiring various facilities for your home, office, or industrial space. With our assistance, you can access Integrated Facility Management, Payroll Services, Outsourced Banking Operations, Optical Fibre Cable Laying, and many more. We have been an established part of the industry since 2013, which has allowed us to broaden our presence across India. Rest assured that we can rescue you in various sectors with our trained and responsive workforce.                        </p>
                         <p className="text-gray-800 mb-6 leading-relaxed">
@@ -28,13 +28,15 @@ export default function AboutPreview() {
                         </p>
                         <a
                             href="/about"
-                            className="inline-block bg-blue-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+                            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-900 transition"
                         >
                             Read More
                         </a>
                     </div>
                 </div>
             </div>
+            <div className="max-w-[78rem] h-px bg-gray-300 my-8 mx-auto"></div>
+
         </section>
     );
 }

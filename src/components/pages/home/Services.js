@@ -1,3 +1,5 @@
+'use client';
+
 import {
     FaBuilding,
     FaUsers,
@@ -7,9 +9,6 @@ import {
     FaBoxes,
     FaBroom,
     FaWarehouse,
-    FaRecycle,
-    FaCalendarCheck,
-    FaCity,
     FaArrowRight,
 } from 'react-icons/fa';
 import Link from 'next/link';
@@ -19,78 +18,60 @@ const services = [
         title: "Integrated Facility Management Services",
         description:
             "We provide experts to manage your facility operations—maintenance, cleaning, and daily tasks—helping you streamline processes, and reduce costs.",
-        icon: <FaBuilding size={32} />,
+        icon: <FaBuilding size={32} className="text-orange-500" />,
     },
     {
         title: "Manpower Outsourcing",
         description:
             "We handle recruitment, training, and deployment of your workforce, letting you reduce admin overhead and improve operational efficiency.",
-        icon: <FaUsers size={32} />,
+        icon: <FaUsers size={32} className="text-orange-500" />,
     },
     {
         title: "Payroll Management",
         description:
             "We take over salary calculations, tax deductions, payslip generation, and ensure complete compliance—removing the monthly payroll hassle.",
-        icon: <FaMoneyCheckAlt size={32} />,
+        icon: <FaMoneyCheckAlt size={32} className="text-orange-500" />,
     },
     {
         title: "Manpower Supply",
         description:
             "Get skilled, semi-skilled, and unskilled staff across industries—available for long-term or project-based requirements.",
-        icon: <FaPeopleCarry size={32} />,
+        icon: <FaPeopleCarry size={32} className="text-orange-500" />,
     },
     {
         title: "Logistics & Transportation",
         description:
             "We ensure timely, safe, and efficient delivery of goods using optimized routes and real-time fleet tracking systems.",
-        icon: <FaTruck size={32} />,
+        icon: <FaTruck size={32} className="text-orange-500" />,
     },
     {
         title: "B2B Logistics",
         description:
             "Simplify backend processes with scalable logistics: warehousing, distribution, and end-to-end supply chain visibility.",
-        icon: <FaBoxes size={32} />,
+        icon: <FaBoxes size={32} className="text-orange-500" />,
     },
     {
         title: "Housekeeping Services",
         description:
             "Efficient and reliable cleaning for offices, commercial spaces, and residences—regular upkeep, deep cleaning, and sanitation.",
-        icon: <FaBroom size={32} />,
+        icon: <FaBroom size={32} className="text-orange-500" />,
     },
     {
         title: "Property Management",
         description:
             "Boost property value and returns with expert management—tenant relations, rent collection, maintenance, and marketing.",
-        icon: <FaWarehouse size={32} />,
-    },
-    {
-        title: "Waste Management",
-        description:
-            "We handle collection, segregation, recycling, and eco-friendly disposal—aligned with environmental regulations and green practices.",
-        icon: <FaRecycle size={32} />,
-    },
-    {
-        title: "Event Management",
-        description:
-            "From venue selection to on-site logistics—we manage your social or corporate events with precision and creativity.",
-        icon: <FaCalendarCheck size={32} />,
-    },
-    {
-        title: "Facade Cleaning",
-        description:
-            "We preserve your property’s aesthetics using advanced equipment and safe chemicals for long-term facade care.",
-        icon: <FaCity size={32} />,
+        icon: <FaWarehouse size={32} className="text-orange-500" />,
     },
     {
         title: "Learn More",
         isCTA: true,
-        icon: <FaArrowRight size={32} />,
+        icon: <FaArrowRight size={32} className="text-orange-500" />,
     },
 ];
 
 export default function OurServices() {
     return (
-        <section className="py-16 bg-[#dedede] text-blue-900">
+        <section className="mt-10 bg-[#dedede] text-blue-900">
             <div className="max-w-7xl mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-4">
                     Our Services
@@ -104,17 +85,17 @@ export default function OurServices() {
                             <Link
                                 key={index}
                                 href="/services"
-                                className="bg-blue-900 text-white text-center flex flex-col items-center justify-center font-semibold p-6 rounded-xl shadow hover:bg-blue-700 hover:scale-105 transition duration-300 transform"
+                                className="bg-blue-900 text-white text-center flex flex-col items-center justify-center font-semibold p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300 transform"
                             >
-                                <div className="mb-4 text-yellow-400">{service.icon}</div>
+                                <div className="mb-4">{service.icon}</div>
                                 <h3 className="text-lg font-semibold">Learn More</h3>
                             </Link>
                         ) : (
                             <div
                                 key={index}
-                                className="bg-blue-900 p-6 rounded-xl text-white shadow hover:shadow-md transition duration-300 transform hover:scale-105"
+                                className="bg-blue-900 p-6 rounded-xl text-white shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
                             >
-                                <div className="text-yellow-400 mb-4">{service.icon}</div>
+                                <div className="mb-4">{service.icon}</div>
                                 <h3 className="font-semibold mb-2">{service.title}</h3>
                                 <p className="text-sm text-gray-300">{service.description}</p>
                             </div>
@@ -122,7 +103,7 @@ export default function OurServices() {
                     )}
                 </div>
             </div>
+            <div className="max-w-[78rem] h-px bg-gray-300 my-8 mx-auto"></div>
         </section>
     );
 }
-  

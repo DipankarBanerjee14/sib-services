@@ -12,7 +12,7 @@ import TestimonialSlider from './TestimonialSlider';
 
 const Home = () => {
     return (
-        <main className="flex flex-col">
+        <main className="mt-0 mb-0">
             <HeroSlider />
             <AboutPreview />
             <MissionVision />

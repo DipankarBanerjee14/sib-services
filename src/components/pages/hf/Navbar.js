@@ -79,7 +79,7 @@ export default function Navbar() {
                                         <FaAngleDown size={12} />
                                         <span
                                             className={`absolute left-0 bottom-[-2px] h-0.5 transition-all duration-300 ${pathname === item.href
-                                                ? 'w-full bg-yellow-400'
+                                                ? 'w-full bg-orange-500'
                                                 : 'w-0 group-hover:w-full bg-blue-600'
                                                 }`}
                                         />
@@ -118,7 +118,7 @@ export default function Navbar() {
                         <li>
                             <a
                                 href="#"
-                                className="flex items-center gap-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
+                                className="flex items-center gap-2 bg-orange-400 text-[#002060] px-4 py-2 rounded hover:bg-orange-300 transition font-semibold"
                             >
                                 <FaPhone className="text-sm" /> Call Us
                             </a>

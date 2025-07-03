@@ -25,29 +25,31 @@ export default function MissionVision() {
     ];
 
     return (
-        <section className="py-16 bg-[#dedede]">
+        <section className="mb-10 bg-[#dedede] ">
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Mission */}
-                <div className="bg-blue-900 shadow-md p-8 rounded-xl flex flex-col justify-between h-full">
+                <div className="bg-white shadow-md p-8 rounded-xl flex flex-col justify-between h-full">
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaBullseye size={28} className="text-yellow-400" />
-                            <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                            <FaBullseye size={28} className="text-orange-500" />
+                            <h3 className="text-2xl font-bold text-blue-900">Our Mission</h3>
                         </div>
-                        <p className="text-yellow-400 mb-4">
-                            Our mission at HRP Management does not just revolve around delivering quality facility services, we also want to make a lasting impact on our customers that is backed by our commitment to excellence, inclusion, and innovation. We want to offer scalable solutions so that every organization in India can reach out to us in any situation. Our mission includes:
-                        </p>
+                        <div className="bg-blue-900 p-4 rounded-xl mb-4">
+                            <p className="text-white mb-4">
+                                Our mission at HRP Management does not just revolve around delivering quality facility services, we also want to make a lasting impact on our customers that is backed by our commitment to excellence, inclusion, and innovation. We want to offer scalable solutions so that every organization in India can reach out to us in any situation. Our mission includes:
+                            </p>
 
-                        <ul className="text-gray-200 list-disc pl-6 space-y-2">
-                            {(showMoreMission ? missionPoints : missionPoints.slice(0, 2)).map((point, index) => (
-                                <li key={index}>{point}</li>
-                            ))}
-                        </ul>
+                            <ul className="text-gray-300 list-disc pl-6 space-y-2">
+                                {(showMoreMission ? missionPoints : missionPoints.slice(0, 2)).map((point, index) => (
+                                    <li key={index}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowMoreMission(!showMoreMission)}
-                            className="bg-yellow-400 text-blue-950 px-6 py-2 rounded hover:bg-white text-sm font-medium inline-block"
+                            className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-blue-900 text-sm font-medium"
                         >
                             {showMoreMission ? 'Show Less' : 'Read More'}
                         </button>
@@ -55,32 +57,37 @@ export default function MissionVision() {
                 </div>
 
                 {/* Vision */}
-                <div className="bg-blue-900 shadow-md p-8 rounded-xl flex flex-col justify-between h-full">
+                <div className="bg-white shadow-md p-8 rounded-xl flex flex-col justify-between h-full">
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaBinoculars size={28} className="text-yellow-400" />
-                            <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                            <FaBinoculars size={28} className="text-orange-500" />
+                            <h3 className="text-2xl font-bold text-blue-900">Our Vision</h3>
                         </div>
-                        <p className="text-yellow-400 mb-4">
-                            At HRP Management, we understand that our clients value transparency, empathy, and operational excellence above everything else. That is why these qualities are the core of every solution we offer. Our vision includes:
-                        </p>
+                        <div className="bg-blue-900 p-4 rounded-xl mb-4">
+                            <p className="text-white mb-4">
+                                At HRP Management, we understand that our clients value transparency, empathy, and operational excellence above everything else. That is why these qualities are the core of every solution we offer. Our vision includes:
+                            </p>
 
-                        <ul className="text-gray-300 list-disc pl-6 space-y-2">
-                            {(showMoreVision ? visionPoints : visionPoints.slice(0, 4)).map((point, index) => (
-                                <li key={index}>{point}</li>
-                            ))}
-                        </ul>
+                            <ul className="text-gray-300 list-disc pl-6 space-y-2">
+                                {(showMoreVision ? visionPoints : visionPoints.slice(0, 4)).map((point, index) => (
+                                    <li key={index}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowMoreVision(!showMoreVision)}
-                            className="bg-yellow-400 text-blue-950 px-6 py-2 rounded hover:bg-white text-sm font-medium inline-block"
+                            className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-blue-900 text-sm font-medium"
                         >
                             {showMoreVision ? 'Show Less' : 'Read More'}
                         </button>
                     </div>
                 </div>
             </div>
+
+            {/* Divider */}
+            <div className="max-w-[78rem] h-px bg-gray-300 my-10 mx-auto"></div>
         </section>
     );
 }

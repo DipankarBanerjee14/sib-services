@@ -34,7 +34,7 @@ export default function Footer() {
 
                 {/* Quick Links */}
                 <div className="flex flex-col items-center md:items-start space-y-2">
-                    <h3 className="text-yellow-400 text-lg font-semibold mb-2">Quick Links</h3>
+                    <h3 className="text-orange-400 text-lg font-semibold mb-2">Quick Links</h3>
                     <ul className="space-y-1 text-sm">
                         <li><Link href="/" className="hover:text-yellow-300">Home</Link></li>
                         <li><Link href="/services" className="hover:text-yellow-300">Services</Link></li>
@@ -46,7 +46,7 @@ export default function Footer() {
 
                 {/* About Section */}
                 <div className="flex flex-col items-center md:items-start space-y-2">
-                    <h3 className="text-yellow-400 text-lg font-semibold mb-2">About</h3>
+                    <h3 className="text-orange-400 text-lg font-semibold mb-2">About</h3>
                     <ul className="space-y-1 text-sm">
                         <li><Link href="/about/missionvision" className="hover:text-yellow-300">Mission & Vision</Link></li>
                         <li><Link href="/about/companies" className="hover:text-yellow-300">Group of Companies</Link></li>
@@ -60,7 +60,7 @@ export default function Footer() {
 
                 {/* Contact Info */}
                 <div className="flex flex-col items-center md:items-start space-y-3 text-sm">
-                    <h3 className="text-yellow-400 text-lg font-semibold mb-2">Contact</h3>
+                    <h3 className="text-orange-400 text-lg font-semibold mb-2">Contact</h3>
                     <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Sarat Bose Road, Kolkata</p>
                     {/* <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p> */}
                     <p className="flex items-center"><FaEnvelope className="mr-2" /> <a href="mailto:hrp@hrpmanagement.in" className="hover:underline">
