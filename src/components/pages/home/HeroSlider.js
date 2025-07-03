@@ -10,24 +10,31 @@ import Image from 'next/image';
 const slides = [
     {
         image: '/images/hero1.png',
+        title: 'Hero Image 1',
     },
     {
         image: '/images/hero2.png',
+        title: 'Hero Image 2',
     },
     {
         image: '/images/hero3.png',
+        title: 'Hero Image 3',
     },
     {
         image: '/images/hero4.png',
+        title: 'Hero Image 4',
     },
     {
         image: '/images/hero5.png',
+        title: 'Hero Image 5',
     },
     {
         image: '/images/hero6.png',
+        title: 'Hero Image 6',
     },
     {
         image: '/images/hero7.png',
+        title: 'Hero Image 7',
     },
 ];
 
