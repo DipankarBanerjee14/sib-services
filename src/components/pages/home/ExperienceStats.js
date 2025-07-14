@@ -19,21 +19,21 @@ export default function ExperienceStats() {
                         <div className="flex flex-col items-center">
                             <FaMapMarkerAlt className="text-orange-500 text-5xl mb-4" />
                             <h3 className="text-3xl font-bold">
-                                {inView && <CountUp end={6500} duration={2.5} />}+
+                                {inView && <CountUp end={17} duration={2.5} />}+
                             </h3>
                             <p className="text-lg text-orange-400">Client Locations</p>
                         </div>
                         <div className="flex flex-col items-center">
                             <FaUsers className="text-orange-500 text-5xl mb-4" />
                             <h3 className="text-3xl font-bold">
-                                {inView && <CountUp end={42000} duration={3} />}+
+                                {inView && <CountUp end={437} duration={3} />}+
                             </h3>
                             <p className="text-lg text-orange-400">Trained Personnel</p>
                         </div>
                         <div className="flex flex-col items-center">
                             <FaSmile className="text-orange-500 text-5xl mb-4" />
                             <h3 className="text-3xl font-bold">
-                                {inView && <CountUp end={756} duration={2} />}+
+                                {inView && <CountUp end={10} duration={2} />}+
                             </h3>
                             <p className="text-lg text-orange-400">Satisfied Customers</p>
                         </div>

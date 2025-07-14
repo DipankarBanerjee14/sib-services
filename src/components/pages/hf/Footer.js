@@ -61,7 +61,7 @@ export default function Footer() {
                 {/* Contact Info */}
                 <div className="flex flex-col items-center md:items-start space-y-3 text-sm">
                     <h3 className="text-orange-400 text-lg font-semibold mb-2">Contact</h3>
-                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Sarat Bose Road, Kolkata</p>
+                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> 2/5 Sarat Bose Road, SUKHSAGAR, KOLKATA, West Bengal, India - 700020</p>
                     {/* <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p> */}
                     <p className="flex items-center"><FaEnvelope className="mr-2" /> <a href="mailto:hrp@hrpmanagement.in" className="hover:underline">
                         hrp@hrpmanagement.in
@@ -76,7 +76,7 @@ export default function Footer() {
                         <a href="#"><FaLinkedin className="hover:text-yellow-400" /></a>
                         <a href="#"><FaTwitter className="hover:text-yellow-400" /></a>
                     </div>
-                </div> */}
+                </div> */}2/5 Sarat Bose Road, SUKHSAGAR. KOLKATA, West Bengal, India - 700020
             </div>
 
             <div className="border-t border-white/20 mt-12 pt-6 text-sm text-center">
