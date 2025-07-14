@@ -76,9 +76,8 @@ export default function Footer() {
                         <a href="#"><FaLinkedin className="hover:text-yellow-400" /></a>
                         <a href="#"><FaTwitter className="hover:text-yellow-400" /></a>
                     </div>
-                </div> */}2/5 Sarat Bose Road, SUKHSAGAR. KOLKATA, West Bengal, India - 700020
-            </div>
-
+                </div> */}
+            </div>            
             <div className="border-t border-white/20 mt-12 pt-6 text-sm text-center">
                 © {new Date().getFullYear()} HRP Management. All rights reserved. Powered by Pro-Riterz.
             </div>
