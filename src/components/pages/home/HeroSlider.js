@@ -36,12 +36,24 @@ const slides = [
         image: '/images/hero7.png',
         title: 'Hero Image 7',
     },
+    {
+        image: '/images/hero8.png',
+        title: 'Hero Image 8',
+    },
+    {
+        image: '/images/hero9.png',
+        title: 'Hero Image 9',
+    },
+    {
+        image: '/images/hero10.png',
+        title: 'Hero Image 10'
+    },
 ];
 
 export default function HeroSlider() {
     return (
-        <div className="relative px-4 sm:px-6 lg:px-8 py-6 pb-8 bg-[#dedede]">
-            <div className="hidden sm:block rounded-xl overflow-hidden shadow-lg h-[78vh] max-w-[78rem] mx-auto">
+        <div className="relative px-4 sm:px-6 lg:px-8 py-2 pb-8 bg-[#dedede]">
+            <div className="hidden sm:block rounded-xl overflow-hidden shadow-lg h-[84vh] max-w-[78rem] mx-auto">
                 <Swiper
                     modules={[Autoplay, Pagination, EffectFade]}
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
