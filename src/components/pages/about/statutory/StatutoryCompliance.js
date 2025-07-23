@@ -56,7 +56,7 @@ export default function StatutoryCompliance() {
             <div className="grid md:grid-cols-2 gap-6">
                 {items.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4 bg-blue-900 p-4 rounded-md shadow-sm">
-                        <div className="text-yellow-400 text-3xl">{item.icon}</div>
+                        <div className="text-orange-500 text-3xl">{item.icon}</div>
                         <p className="text-white font-xl">{item.text}</p>
                     </div>
                 ))}

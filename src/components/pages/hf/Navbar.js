@@ -35,7 +35,7 @@ export default function Navbar() {
                 { name: 'Corporate Social Responsibility', href: '/about/csr' },
                 { name: 'Our People', href: '/about/ourpeople' },
                 { name: 'Mission & Vision', href: '/about/missionvision' },
-                { name: 'Group of Companies', href: '/about/companies' },
+                // { name: 'Group of Companies', href: '/about/companies' },
                 { name: 'Locations', href: '/about/location' },
                 { name: 'Statutory Compliance', href: '/about/statutory' },
             ],

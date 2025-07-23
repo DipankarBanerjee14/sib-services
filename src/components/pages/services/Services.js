@@ -1,3 +1,4 @@
+import { BsCashStack } from "react-icons/bs";
 import {
     FaBuilding,
     FaUsers,
@@ -120,7 +121,7 @@ export default function Services() {
             title: "ATM Cash Management & Cash Van Services",
             description:
                 "Secure cash movement and ATM refilling using armored vans and RBI-compliant protocols.",
-            icon: <FaCashRegister />,
+            icon: <BsCashStack />,
         },
         {
             title: "Alarm Management Services",
@@ -191,7 +192,7 @@ export default function Services() {
                         key={index}
                         className="bg-blue-900 text-white p-6 rounded-xl shadow-md hover:shadow-xl transform transition-transform hover:scale-105 duration-300"
                     >
-                        <div className="text-yellow-400 text-3xl mb-4">{service.icon}</div>
+                        <div className="text-orange-500 text-3xl mb-4">{service.icon}</div>
                         <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                         <p className="text-sm text-gray-200">{service.description}</p>
                     </div>

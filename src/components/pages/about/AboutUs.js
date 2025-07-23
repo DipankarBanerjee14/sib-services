@@ -14,7 +14,7 @@ export default function AboutUs() {
                     </p>
 
                     <p>
-                        At HRP Management, we consistently take steps to improve our performance each year, as we strive for long-term sustainability and client satisfaction. We are proud and efficient providers of Integrated Facility Management, Security Services, Manpower Outsourcing, Logistics, Payroll Support, and more. Our establishment was founded on November 8, 2013, under the trusted leadership of Mr. Shyamal Karmakar. While we operate independently, our foundation is built on the same leadership values and vision that guided the growth of S&IB.
+                        At HRP Management, we consistently take steps to improve our performance each year, as we strive for long-term sustainability and client satisfaction. We are proud and efficient providers of Integrated Facility Management, Security Services, Manpower Outsourcing, Logistics, Payroll Support, and more. Our establishment was founded on November 8, 2013, under the trusted leadership of Mr. Shyamal Karmakar. We operate independently, guided by a clear set of leadership values and a long-term vision focused on growth and integrity.
                     </p>
 
                     <p>
