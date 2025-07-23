@@ -53,14 +53,14 @@ export default function Navbar() {
 
     return (
         <nav className="sticky top-0 z-50 bg-transparent">
-            <div className="w-full md:max-w-[78rem] mx-auto mt-2 px-4 sm:px-6 bg-white rounded-xl shadow-lg">
+            <div className="w-full md:max-w-[78rem] mx-auto mt-2 px-2 sm:px-6 bg-white rounded-xl shadow-lg">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     <Link href="/" className="flex items-center h-full">
                         <Image
                             src="/images/logo.png"
                             alt="HRP Logo"
-                            width={120}
-                            height={120}
+                            width={100}
+                            height={100}
                             className="w-[120px] h-auto object-contain"
                             priority
                         />

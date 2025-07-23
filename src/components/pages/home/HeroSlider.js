@@ -9,44 +9,36 @@ import Image from 'next/image';
 
 const slides = [
     {
-        image: '/images/hero1.png',
+        image: '/images/home1.png',
         title: 'Hero Image 1',
     },
     {
-        image: '/images/hero2.png',
+        image: '/images/home2.png',
         title: 'Hero Image 2',
     },
     {
-        image: '/images/hero3.png',
+        image: '/images/home3.png',
         title: 'Hero Image 3',
     },
     {
-        image: '/images/hero4.png',
+        image: '/images/home4.png',
         title: 'Hero Image 4',
     },
     {
-        image: '/images/hero5.png',
+        image: '/images/home5.png',
         title: 'Hero Image 5',
     },
     {
-        image: '/images/hero6.png',
+        image: '/images/home6.png',
         title: 'Hero Image 6',
     },
     {
-        image: '/images/hero7.png',
+        image: '/images/home7.png',
         title: 'Hero Image 7',
     },
     {
-        image: '/images/hero8.png',
+        image: '/images/home8.png',
         title: 'Hero Image 8',
-    },
-    {
-        image: '/images/hero9.png',
-        title: 'Hero Image 9',
-    },
-    {
-        image: '/images/hero10.png',
-        title: 'Hero Image 10'
     },
 ];
 
