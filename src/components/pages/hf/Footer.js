@@ -36,11 +36,11 @@ export default function Footer() {
                 <div className="flex flex-col items-center md:items-start space-y-2">
                     <h3 className="text-orange-400 text-lg font-semibold mb-2">Quick Links</h3>
                     <ul className="space-y-1 text-sm">
-                        <li><Link href="/" className="hover:text-yellow-300">Home</Link></li>
-                        <li><Link href="/services" className="hover:text-yellow-300">Services</Link></li>
-                        <li><Link href="/careers" className="hover:text-yellow-300">Careers</Link></li>
-                        <li><Link href="/about" className="hover:text-yellow-300">About Us</Link></li>                        
-                        <li><Link href="/contact" className="hover:text-yellow-300">Contact Us</Link></li>
+                        <li><Link href="/" className="hover:text-orange-300">Home</Link></li>
+                        <li><Link href="/services" className="hover:text-orange-300">Services</Link></li>
+                        <li><Link href="/careers" className="hover:text-orange-300">Careers</Link></li>
+                        <li><Link href="/about" className="hover:text-orange-300">About Us</Link></li>                        
+                        <li><Link href="/contact" className="hover:text-orange-300">Contact Us</Link></li>
                     </ul>
                 </div>
 
@@ -48,13 +48,13 @@ export default function Footer() {
                 <div className="flex flex-col items-center md:items-start space-y-2">
                     <h3 className="text-orange-400 text-lg font-semibold mb-2">About</h3>
                     <ul className="space-y-1 text-sm">
-                        <li><Link href="/about/missionvision" className="hover:text-yellow-300">Mission & Vision</Link></li>
+                        <li><Link href="/about/missionvision" className="hover:text-orange-300">Mission & Vision</Link></li>
                         {/* <li><Link href="/about/companies" className="hover:text-yellow-300">Group of Companies</Link></li> */}
-                        <li><Link href="/about/training" className="hover:text-yellow-300">Training & Development</Link></li>
-                        <li><Link href="/about/csr" className="hover:text-yellow-300">Corporate Social Responsibility</Link></li>
-                        <li><Link href="/about/ourpeople" className="hover:text-yellow-300">Our People</Link></li>
-                        <li><Link href="/about/location" className="hover:text-yellow-300">Locations</Link></li>
-                        <li><Link href="/about/statutory" className="hover:text-yellow-300">Statutory Compliance</Link></li>
+                        <li><Link href="/about/training" className="hover:text-orange-300">Training & Development</Link></li>
+                        <li><Link href="/about/csr" className="hover:text-orange-300">Corporate Social Responsibility</Link></li>
+                        <li><Link href="/about/ourpeople" className="hover:text-orange-300">Our People</Link></li>
+                        <li><Link href="/about/location" className="hover:text-orange-300">Locations</Link></li>
+                        <li><Link href="/about/statutory" className="hover:text-orange-300">Statutory Compliance</Link></li>
                     </ul>
                 </div>
 
