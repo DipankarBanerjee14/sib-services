@@ -11,7 +11,7 @@ const testimonials = [
         name: 'Rohit Sharma',
         role: 'General Manager, XYZ Ltd.',
         feedback:
-            'S & IB’s team is highly professional and trustworthy. Their facility management has helped our business run smoothly.',
+            'HRP team is highly professional and trustworthy. Their facility management has helped our business run smoothly.',
     },
     {
         name: 'Neha Verma',
