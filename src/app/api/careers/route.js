@@ -29,9 +29,9 @@ export async function POST(req) {
         const buffer = Buffer.from(arrayBuffer);
 
         const transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_HOST, // smtppro.zoho.in
+            host: process.env.EMAIL_HOST,
             port: parseInt(process.env.EMAIL_PORT || "465"),
-            secure: true, // true for SSL
+            secure: true,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
@@ -40,7 +40,7 @@ export async function POST(req) {
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_TO,
+            to: process.env.CAREER_EMAIL_TO, // 👈 Career-specific recipient
             subject: `New Career Application from ${name}`,
             text: `
 Job: ${job}
