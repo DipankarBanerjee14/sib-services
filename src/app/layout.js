@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Navbar from "@/components/pages/hf/Navbar";
 import Footer from "@/components/pages/hf/Footer";
+import BackToTopButton from "@/components/common/BackToTopButton"; // ✅ Import here
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <BackToTopButton /> {/* ✅ Add this here */}
       </body>
     </html>
   );
