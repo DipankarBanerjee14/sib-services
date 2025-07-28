@@ -117,7 +117,7 @@ export default function Navbar() {
                         )}
                         <li>
                             <a
-                                href="#"
+                                href="tel:9830303203"
                                 className="flex items-center gap-2 bg-orange-400 text-[#002060] px-4 py-2 rounded hover:bg-orange-300 transition font-semibold"
                             >
                                 <FaPhone className="text-sm" /> Call Us
@@ -183,7 +183,7 @@ export default function Navbar() {
                             )}
                             <li>
                                 <a
-                                    href="#"
+                                    href="tel:9830303203"
                                     onClick={handleMobileLinkClick}
                                     className="inline-block mt-2 bg-yellow-400 text-[#002060] px-4 py-2 rounded hover:bg-yellow-300 transition font-semibold"
                                 >

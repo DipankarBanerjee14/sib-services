@@ -8,22 +8,14 @@ import { FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
     {
-        name: 'Rohit Sharma',
-        role: 'General Manager, XYZ Ltd.',
+        name: 'Hironmoy Ghosh',
         feedback:
-            'HRP team is highly professional and trustworthy. Their facility management has helped our business run smoothly.',
+            'I was looking for reliable pest control services and then I got to know about HRP from my friend. I contacted them and they arrived promptly at my home. They sprayed chemicals and other stuff in every nook and corner of my house and now my home looks so manageable without those pests troubling me! Thank you HRP.',
     },
     {
-        name: 'Neha Verma',
-        role: 'HR Head, ABC Corp',
+        name: 'Rudrasis Dey',
         feedback:
-            'Their security and housekeeping solutions are top-notch. We’ve seen a huge improvement in efficiency since partnering.',
-    },
-    {
-        name: 'Anil Kapoor',
-        role: 'Admin Officer, DEF Group',
-        feedback:
-            'Prompt service, great communication, and complete peace of mind. Highly recommended for integrated services.',
+            'Presently this is a largest manpower solution company in india providing various manpower services like house keeping, armed and non armed security personnel, any many more other services as when required.The company maintains a beautiful corporate office.',
     },
 ];
 

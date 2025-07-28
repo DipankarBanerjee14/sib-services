@@ -61,7 +61,7 @@ export default function Footer() {
                 {/* Contact Info */}
                 <div className="flex flex-col items-center md:items-start space-y-3 text-sm">
                     <h3 className="text-orange-400 text-lg font-semibold mb-2">Contact</h3>
-                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> 2/5 Sarat Bose Road, SUKHSAGAR, <br /> KOLKATA, West Bengal, India-700020</p>
+                    <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> 2/5 Sarat Bose Road, Sukhsagar, <br /> Kolkata, West Bengal, India-700020</p>
                     {/* <p className="flex items-center"><FaPhoneAlt className="mr-2" /> +91-8069200100</p> */}
                     <p className="flex items-center"><FaEnvelope className="mr-2" /> <a href="mailto:hrp@hrpmanagement.in" className="hover:underline">
                         hrp@hrpmanagement.in
